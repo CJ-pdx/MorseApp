@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MorseApp">
+
+
+    <GridView
+        android:id="@+id/morse_buttons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:verticalSpacing="@dimen/gridView_vertSpacing"
+        android:horizontalSpacing="@dimen/gridView_horizSpacing"
+        android:choiceMode="singleChoice"
+        android:numColumns="3"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="5">
+
+        <TextView
+            android:text="@string/welcome_message"
+            android:id="@+id/main_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/textView_textSize"/>
+
+        <ImageView
+            android:src="@drawable/morseapp_default_image"
+            android:id="@+id/display_image"
+            android:contentDescription="@string/display_image_contentDescription"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="morseLetterCell_textSize">18sp</dimen>
+    <dimen name="textView_marginTop">20dp</dimen>
+    <dimen name="textView_textSize">24sp</dimen>
+    <dimen name="gridView_vertSpacing">3dp</dimen>
+    <dimen name="gridView_horizSpacing">3dp</dimen>
+
+
+    <dimen name="ldpi_textView_textSize">18sp</dimen>
+    <dimen name="ldpi_gridView_vertSpacing">1dp</dimen>
+    <dimen name="ldpi_gridView_horizSpacing">1dp</dimen>
+</resources>
