@@ -46,17 +46,12 @@ public class TextToMorse extends AppCompatActivity {
             char inputChar = inputString.charAt(i);
 
             if (Character.toString(inputChar).equals(" ")) {
-                morseArray.add(tempString.toString());
                 morseArray.add("|");
-                tempString.delete(0, tempString.length());
-            } else if (translator.hasKey(inputChar)) {
-                tempString.append(translator.getKeyValue(inputChar));
-
-                if (i == inputString.length() - 1) {
-                    morseArray.add(tempString.toString());
-                    tempString.delete(0, tempString.length());
-                }
-            } else {
+            }
+            else if (translator.hasKey(inputChar)) {
+                morseArray.add(translator.getKeyValue(inputChar));
+            }
+            else {
                 Log.d(LOG_TAG, "Unvalidated input was accepted by TextToMorse.convertTextToMorseArray()");
             }
         }
@@ -74,28 +69,29 @@ public class TextToMorse extends AppCompatActivity {
         toneGenerator = new ToneGenerator(AudioManager.STREAM_SYSTEM, 75);
 
         for (int i = 0; i < morseArray.size(); i++) {
-            Thread.sleep(900);
             String morseLetterString = morseArray.get(i).toString();
+
+            if (morseLetterString.charAt(0) == '|') {
+                Thread.sleep(700);
+                continue;
+            }
 
             for (int ii = 0; ii < morseLetterString.length(); ii++) {
 
-                if (morseLetterString.charAt(0) == '|'){
-                    Thread.sleep(1200);
-                    break;
-                }
                 if (morseLetterString.charAt(ii) == '.') {
                     toneGenerator.startTone(TONE_DTMF_1, 100);
                     Log.d(LOG_TAG, "Attempted to play dit sound");
-                    Thread.sleep(300);
+                    Thread.sleep(400);
                 } else if (morseLetterString.charAt(ii) == '-') {
                     toneGenerator.startTone(TONE_DTMF_1, 300);
                     Log.d(LOG_TAG, "Attempted to play dah sound");
-                    Thread.sleep(500);
+                    Thread.sleep(600);
                 } else {
                     Log.d(LOG_TAG, "Unidentified character found in TextToMorse.playMorse()");
                 }
 
             }
+
         }
     }
 }
