@@ -1,5 +1,6 @@
 package edu.pcc.chris.morseapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -12,13 +13,10 @@ import android.os.Bundle;
 
 public class MorseApp extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // setContentView will likely move into where are menu activity exists
-        setContentView(R.layout.activity_morse_keyboard);
+        startActivity(new Intent(this, MorseKeyboard.class));
     }
-
 }
 
