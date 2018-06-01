@@ -56,11 +56,9 @@ public class MorseKeyboard extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
     /**
      * Populate a list of morseLetter objects
      */
-
     private void initMorseLetters() {
         morseLetterList = new ArrayList<>();
 
@@ -170,7 +168,6 @@ public class MorseKeyboard extends AppCompatActivity {
 
         morseLetterList.add(new MorseLetter(this, R.drawable.num9, R.raw.num9,
                 R.string.buttonText_9, R.string.labelText_9));
-
     }
 
     /**
@@ -223,8 +220,4 @@ public class MorseKeyboard extends AppCompatActivity {
             player.start();
         }
     }
-
-
-
-
 }

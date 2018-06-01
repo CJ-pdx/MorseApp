@@ -21,7 +21,6 @@ public class TextToMorse extends AppCompatActivity {
     private static final String LOG_TAG = "TextToMorse.class: ";
     ToneGenerator toneGenerator;
 
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -32,12 +31,12 @@ public class TextToMorse extends AppCompatActivity {
     public void convertTextToMorseArray(View view) throws InterruptedException {
 
         ArrayList<String> morseArray = new ArrayList<String>();
-        StringBuilder tempString = new StringBuilder();
         MorseTranslator translator = new MorseTranslator();
 
         EditText userInputView = (EditText) findViewById(R.id.input_text);
         String inputString = userInputView.getText().toString();
-        //add input validation (accept numbers and letters only, and limit number of characters)
+        //add input validation later (accept numbers and letters only,
+        // and limit number of characters)
         inputString = inputString.toUpperCase();
 
         Log.d(LOG_TAG, "input string: " + inputString);
@@ -48,9 +47,11 @@ public class TextToMorse extends AppCompatActivity {
             if (Character.toString(inputChar).equals(" ")) {
                 morseArray.add("|");
             }
+
             else if (translator.hasKey(inputChar)) {
                 morseArray.add(translator.getKeyValue(inputChar));
             }
+
             else {
                 Log.d(LOG_TAG, "Unvalidated input was accepted by TextToMorse.convertTextToMorseArray()");
             }
@@ -66,7 +67,8 @@ public class TextToMorse extends AppCompatActivity {
 
     private void playMorse(ArrayList morseArray) throws InterruptedException {
 
-        toneGenerator = new ToneGenerator(AudioManager.STREAM_SYSTEM, 75);
+        toneGenerator = new ToneGenerator(AudioManager.STREAM_SYSTEM, 100);
+        int pitch = TONE_DTMF_1; //slider bar to select pitch will go here
 
         for (int i = 0; i < morseArray.size(); i++) {
             String morseLetterString = morseArray.get(i).toString();
@@ -79,20 +81,22 @@ public class TextToMorse extends AppCompatActivity {
             for (int ii = 0; ii < morseLetterString.length(); ii++) {
 
                 if (morseLetterString.charAt(ii) == '.') {
-                    toneGenerator.startTone(TONE_DTMF_1, 100);
+                    toneGenerator.startTone(pitch, 100);
                     Log.d(LOG_TAG, "Attempted to play dit sound");
                     Thread.sleep(400);
+
                 } else if (morseLetterString.charAt(ii) == '-') {
-                    toneGenerator.startTone(TONE_DTMF_1, 300);
+                    toneGenerator.startTone(pitch, 300);
                     Log.d(LOG_TAG, "Attempted to play dah sound");
                     Thread.sleep(600);
+
                 } else {
                     Log.d(LOG_TAG, "Unidentified character found in TextToMorse.playMorse()");
                 }
-
             }
-
         }
+
+        toneGenerator.release();
     }
 }
 

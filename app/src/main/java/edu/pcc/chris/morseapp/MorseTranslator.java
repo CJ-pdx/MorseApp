@@ -24,10 +24,7 @@ public class MorseTranslator {
     private static final String morse_6 = "-...."; private static final String morse_7 = "--...";
     private static final String morse_8 = "---.."; private static final String morse_9 = "----.";
 
-
-
     private TreeMap<String, String> morseTreeMap;
-
 
     public MorseTranslator() {
         morseTreeMap = new TreeMap<>();
@@ -48,21 +45,18 @@ public class MorseTranslator {
         morseTreeMap.put("4", morse_4); morseTreeMap.put("5", morse_5); morseTreeMap.put("6", morse_6);
         morseTreeMap.put("7", morse_7); morseTreeMap.put("8", morse_8); morseTreeMap.put("9", morse_9);
     }
-
-
     //Accessors
-
     public String getKeyValue(char inputKey) {
         return morseTreeMap.get(Character.toString(inputKey)); }
 
     public Boolean hasKey(char inputKey) {
         return morseTreeMap.containsKey(Character.toString(inputKey)); }
 
-    public Boolean doesValueExist(String inputValue) {
+    public Boolean doesValueExist(String inputValue) { // might use this later on
         return morseTreeMap.containsValue(inputValue);
     }
 
-    public Set getKeySet() {
+    public Set getKeySet() { // might use this later on
         return morseTreeMap.keySet();
     }
 
