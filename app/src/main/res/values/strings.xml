@@ -96,6 +96,7 @@
     <string name="activity_about_header">MorseApp (version 0.1.0)</string>
     <string name="about_developer_name">Developed by Chris Jacobs</string>
     <string name="about_contact_info">Contact: chris.jacobs2@pcc.edu</string>
-    <string name="about_description">MorseApp was developed as a project for CIS 135M. Its original purpose was to serve as a learning tool though which I could implement some foundations of mobile application development, including UI design basics, basic interactivity/input validation, multiple device support, Android lifecycle and security, and fragments. Not that the class is almost complete, the goal is to publish a working version on Play Store and continue to add features when able.</string>
+    <string name="about_description">MorseApp was developed as a project for CIS 135M. Its original purpose was to serve as a learning tool though which I could implement some foundations of mobile application development, including UI design basics, basic interactivity/input validation, multiple device support, Android lifecycle and security, and fragments. Now that the course is almost complete, the goal is to publish a working version on Play Store and continue to add features when able.</string>
+    <string name="about_github_repo_address">GitHub Repo: https://github.com/CJ-pdx/MorseApp</string>
 
 </resources>
