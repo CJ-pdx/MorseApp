@@ -5,5 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="activated_cell_background">#C0C0C0</color>
     <color name="pressed_cell_background">#d0fffb</color>
-    <color name="nomral_cell_background">#808080</color>
+    <color name="normal_cell_background">#808080</color>
+
+    <color name="seekbar_color">#009933</color>
 </resources>

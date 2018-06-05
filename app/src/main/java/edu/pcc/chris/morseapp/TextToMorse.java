@@ -136,8 +136,10 @@ public class TextToMorse extends AppCompatActivity {
                 return true;
             case R.id.menu_morse_keyboard_activity:
                 startActivity(new Intent(this, MorseKeyboard.class));
+                return true;
             case R.id.menu_text_to_morse_activity:
                 startActivity(new Intent(this, TextToMorse.class));
+                return true;
         }
 
         return super.onOptionsItemSelected(item);

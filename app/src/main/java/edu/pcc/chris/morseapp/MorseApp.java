@@ -1,5 +1,6 @@
 package edu.pcc.chris.morseapp;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,7 +12,7 @@ import android.os.Bundle;
  * portrait mode only).
  */
 
-public class MorseApp extends AppCompatActivity {
+public class MorseApp extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

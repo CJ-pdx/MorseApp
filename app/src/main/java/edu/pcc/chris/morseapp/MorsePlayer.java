@@ -19,6 +19,8 @@ public class MorsePlayer extends TextToMorse {
     private boolean isPlaying;
     private boolean isPaused;
 
+    public MorsePlayer() { }
+
     MorsePlayer(int volumeSeekValue) {
         toneGenerator = new ToneGenerator(AudioManager.STREAM_SYSTEM, volumeSeekValue);
     }

@@ -8,10 +8,20 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="KeyboardActivity" parent="AppTheme">
+    <style name="TextView_LargeLabel"
+        parent="@android:style/Widget.TextView">
+        <item name="android:textSize">36sp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:gravity">center</item>
+    </style>
 
-        <item name="android:textSize">24sp</item>
+    <style name="SeekBar"
+        parent="@android:style/Widget.SeekBar">
+        <item name="colorAccent">@color/seekbar_color</item>
+    </style>
 
+    <style name="DialogTheme"
+        parent="android:Theme.Material.Dialog">
     </style>
 
 </resources>

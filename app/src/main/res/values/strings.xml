@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MorseApp</string>
-    <string name="welcome_message">Welcome to Morse App!</string>
+    <string name="welcome_message">Welcome to MorseApp!</string>
     <string name="display_image_contentDescription">Picture of Morse Key Device</string>
 
     <string name="buttonText_A">A</string>
@@ -93,10 +93,12 @@
     <string name="pitch_level_five">Pitch: 852/1477Hz</string>
     <string name="pitch_level_six">Pitch: 852/1633Hz</string>
     <string name="pitch_level_seven">Pitch: 941/1633Hz</string>
-    <string name="activity_about_header">MorseApp (version 0.1.0)</string>
+    <string name="activity_about_header">MorseApp</string>
     <string name="about_developer_name">Developed by Chris Jacobs</string>
     <string name="about_contact_info">Contact: chris.jacobs2@pcc.edu</string>
-    <string name="about_description">MorseApp was developed as a project for CIS 135M. Its original purpose was to serve as a learning tool though which I could implement some foundations of mobile application development, including UI design basics, basic interactivity/input validation, multiple device support, Android lifecycle and security, and fragments. Now that the course is almost complete, the goal is to publish a working version on Play Store and continue to add features when able.</string>
+    <string name="about_description_section_one">MorseApp was developed as a project for CIS 135M. Its original purpose was to serve as a learning tool though which I could implement some foundations of mobile application development, including UI design basics, basic interactivity/input validation, multiple device support, Android lifecycle and security, and fragments.</string>
+    <string name="about_description_section_two">Now that the course is almost complete, the goal is to publish a working version on Play Store and continue to add features when able.</string>
     <string name="about_github_repo_address">GitHub Repo: https://github.com/CJ-pdx/MorseApp</string>
+    <string name="activity_about_version">(version 0.1.1)</string>
 
 </resources>

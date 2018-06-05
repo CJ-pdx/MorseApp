@@ -2,5 +2,5 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@color/activated_cell_background" android:state_activated="true"/>
     <item android:drawable="@color/pressed_cell_background" android:state_pressed="true"/>
-    <item android:drawable="@color/nomral_cell_background"/>
+    <item android:drawable="@color/normal_cell_background"/>
 </selector>

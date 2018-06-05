@@ -45,6 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/pitch_label"
         android:layout_marginTop="20dp"
+        android:theme="@style/SeekBar"
         android:max="6"
         android:progress="0"/>
 
