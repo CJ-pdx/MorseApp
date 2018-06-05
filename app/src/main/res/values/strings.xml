@@ -77,6 +77,25 @@
     <string name="labelText_7">Seven</string>
     <string name="labelText_8">Eight</string>
     <string name="labelText_9">Nine</string>
+
     <string name="ImageView_contentDescription">Dot dash image</string>
+    <string name="text_to_morse_label">Text To Morse</string>
+    <string name="input_text_hint">Enter text:</string>
+    <string name="translate_button_text">Translate To Morse</string>
+    <string name="pitch_label_value">Pitch: 697/1209Hz</string>
+    <string name="volume_label_value">Volume: %d</string>
+
+
+    <string name="pitch_level_one">Pitch: 697/1209Hz</string>
+    <string name="pitch_level_two">Pitch: 697/1336Hz</string>
+    <string name="pitch_level_three">Pitch: 770/1336Hz</string>
+    <string name="pitch_level_four">Pitch: 770/1477Hz</string>
+    <string name="pitch_level_five">Pitch: 852/1477Hz</string>
+    <string name="pitch_level_six">Pitch: 852/1633Hz</string>
+    <string name="pitch_level_seven">Pitch: 941/1633Hz</string>
+    <string name="activity_about_header">MorseApp (version 0.1.0)</string>
+    <string name="about_developer_name">Developed by Chris Jacobs</string>
+    <string name="about_contact_info">Contact: chris.jacobs2@pcc.edu</string>
+    <string name="about_description">MorseApp was developed as a project for CIS 135M. Its original purpose was to serve as a learning tool though which I could implement some foundations of mobile application development, including UI design basics, basic interactivity/input validation, multiple device support, Android lifecycle and security, and fragments. Not that the class is almost complete, the goal is to publish a working version on Play Store and continue to add features when able.</string>
 
 </resources>

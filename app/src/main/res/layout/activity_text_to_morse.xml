@@ -1,37 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TextToMorse"
-    android:orientation="vertical">
+    tools:context=".TextToMorse">
 
     <TextView
-        android:text="Text To Morse"
+        android:text="@string/text_to_morse_label"
         android:id="@+id/main_label"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="@dimen/textView_textSize"/>
 
     <EditText
         android:id="@+id/input_text"
+        android:inputType="text"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_height="250dp"
+        android:layout_below="@id/main_label"
         android:gravity="top"
-        android:hint="Enter text:"/>
+        android:hint="@string/input_text_hint"/>
 
     <Button
         android:id="@+id/translate_button"
-        android:onClick="convertTextToMorseArray"
-        android:layout_width="wrap_content"
+        android:onClick="playMorse"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Translate To Morse"
-        android:layout_gravity="center"/>
+        android:text="@string/translate_button_text"
+        android:layout_below="@id/input_text"/>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/pitch_label"
+        android:text="@string/pitch_level_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/translate_button"
+        android:layout_marginTop="@dimen/textView_marginTop"
+        android:gravity="center"/>
+
+    <SeekBar
+        android:id="@+id/pitch_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pitch_label"
+        android:layout_marginTop="20dp"
+        android:max="6"
+        android:progress="0"/>
+
+    <TextView
+        android:id="@+id/volume_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/volume_label_value"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/textView_marginTop"
+        android:layout_below="@id/pitch_seekbar" />
+
+    <SeekBar
+        android:id="@+id/volume_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/volume_label"
+        android:layout_marginTop="20dp"
+        android:max="100"
+        android:progress="75"/>
+
+</RelativeLayout>

@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".MorseKeyboard" android:theme="@style/AppTheme"/>
         <activity android:name=".TextToMorse" />
+        <activity android:name=".MorsePlayer" />
     </application>
 
 </manifest>

@@ -56,6 +56,7 @@ public class MorseKeyboard extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
     /**
      * Populate a list of morseLetter objects
      */
@@ -173,7 +174,6 @@ public class MorseKeyboard extends AppCompatActivity {
     /**
      * Populate the button grid with morse letters/numbers
      */
-
     public void addMorseLetters() {
         GridView buttonGrid = (GridView) findViewById(R.id.morse_buttons);
         buttonGrid.setAdapter(
@@ -194,7 +194,6 @@ public class MorseKeyboard extends AppCompatActivity {
      * the morseLetter's morse code sound.
      * @param morseLetter a MorseLetter object, assigned to a button in the button grid.
      */
-
     public void morseButtonClick(MorseLetter morseLetter) {
         ImageView displayImage = (ImageView) findViewById(R.id.display_image);
         TextView mainLabel = (TextView) findViewById(R.id.main_label);

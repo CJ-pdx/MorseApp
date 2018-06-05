@@ -13,9 +13,9 @@ public class MorseLetter {
     private Integer labelId;
     private Context context;
 
-    public MorseLetter(Context context, Integer imageId,
-                       Integer soundId, Integer buttonId,
-                       Integer labelId) {
+    MorseLetter(Context context, Integer imageId,
+                Integer soundId, Integer buttonId,
+                Integer labelId) {
 
         this.context = context;
         this.imageId = imageId;
